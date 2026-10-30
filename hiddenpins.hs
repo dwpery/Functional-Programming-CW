@@ -1,5 +1,6 @@
 main :: IO ()
-main = print x_generator2
+main
+  = print ( filter selector2 generator2 )
 
 -- Generates All possibole sets of PINs
 generator2 :: [(String, String)]
