@@ -46,14 +46,3 @@ selector1 (a, b, c, d)
         (Just area1, Just area2) -> abs (area1 - area2) == 504
         _                        -> False
     _ -> False
-
--- Test for selector1
-x_selector1 :: Int
-x_selector1
-  = length [ t | t <- [ t1 , t2 , t3 , t4 , t5 ] , t ]
-    where
-      t1 = selector1 (20 ,78 ,42 ,56) == True
-      t2 = selector1 (12 ,56 ,78 ,42) == False
-      t3 = selector1 (12 ,78 , 9 ,89) == False
-      t4 = selector1 (17 , 4 ,13 ,13) == False
-      t5 = selector1 (41 ,57 ,16 ,88) == False
