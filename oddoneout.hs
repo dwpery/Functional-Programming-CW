@@ -1,6 +1,8 @@
+import Data.List (nub)
+
 main :: IO ()
 main
-  = print x_generator4
+  = print ( filter selector4 generator4 )
 
 generator4 :: [String]
 generator4
@@ -16,17 +18,7 @@ generator4
 
 prime :: Int -> Bool
 prime n
-  = factors n == [1,n]
+  = factors n == [1,n] && n > 1
     where
     factors n
       = [f | f <- [1..n], n `mod` f == 0]
-
-x_generator4 :: Int
-x_generator4
-  = length [ t | t <- [ t1 , t2 , t3 , t4 , t5 ] , t ]
-  where
-    t1 = "331" `elem` generator4
-    t2 = "557" `elem` generator4
-    t3 = "593" `elem` generator4
-    t4 = "151" `notElem` generator4
-    t5 = "991" `notElem` generator4
