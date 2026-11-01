@@ -71,13 +71,3 @@ selector3 (h1@((s1, v1), (s2, v2)), h2@((s3, v3), (s4, v4))) =
           c2' <- remDeck,
           c4' <- remDeck,
           c2' /= c4']
-
-x_selector3 :: Int
-x_selector3
-  = length [ t | t <- [ t1 , t2 , t3 , t4 , t5 ] , t ]
-  where
-    t1 = selector3 ((( 'D' ,7) ,( 'S' ,7) ) ,(( 'C' ,1) ,('H' ,2) ) ) == False
-    t2 = selector3 ((( 'D' ,3) ,( 'H' ,3) ) ,(( 'C',3) ,('S' ,3) ) ) == False
-    t3 = selector3 ((( 'S' ,1) ,( 'D' ,4) ) ,(( 'C', 7) ,('H' ,4) ) ) == False
-    t4 = selector3 ((( 'D' ,10) ,( 'H' ,2) ) ,(( 'C' ,10) ,('S' ,2) ) ) == False
-    t5 = selector3 ((( 'D' ,2) ,( 'H' ,2) ) ,(( 'C' ,13) ,('S' ,13) ) ) == False
